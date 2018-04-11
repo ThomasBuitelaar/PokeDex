@@ -1,18 +1,13 @@
 <?php
-
 class Pikachu extends Pokemon
 {
-	public $name = "Pikachu";
-	public $energyType = "Lightning";
-	public $health = 60;
-	public $weakness = "Fire";
-	public $weaknessMultiplier = 1.5;
-	public $resistance = 'Fighting';
-	public $resistanceMultiplier = 20;
-	public $attack = array(array("Electric Ring", 50), array("Pika Punch", 20));
-
 	public function __construct($name)
 	{
-		parent::__construct($name, $this->energyType, $this->health, $this->weakness, $this->weaknessMultiplier, $this->resistance, $this->resistanceMultiplier, $this->attack);
+		$pikachuAttack1 = new Attack('Electric Ring', 50);
+		$pikachuAttack2 = new Attack('Pika Punch', 20);
+		$pikachuWeakness = new Weakness('Fire', 1.5);
+		$pikachuResistance = new Resistance('Fighting', 20);
+
+		parent::__construct($name, 'Lightning', 60,[$pikachuAttack1, $pikachuAttack2], $pikachuWeakness, $pikachuResistance);
 	}
 }
