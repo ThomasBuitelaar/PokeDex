@@ -1,4 +1,5 @@
 <?php
+
 class Charmeleon extends Pokemon
 {
 	public function __construct($name)

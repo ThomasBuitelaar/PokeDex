@@ -52,6 +52,7 @@ class Pokemon
 
 		echo "<br>".$attackedPokemon->name."&#39;s current health is ". $attackedPokemon->health ."<br>";
 	}
+
 	public function showData()
 	{
 		echo "<h3>".$this->name."</h3>";
@@ -73,44 +74,5 @@ class Pokemon
 		echo $this->resistance->energyType . " with a multiplier of ";
 		echo $this->resistance->multiplier . "x<br>";
 		echo "========================= <br>";
-	}
-}
-
-class Resistance
-{
-
-public $energyType;
-public $multiplier;
-
-public function __construct($energyType, $multiplier)
-	{
-		$this->energyType = $energyType;
-		$this->multiplier = $multiplier;
-	}
-}
-
-
-class Weakness
-{
-
-public $energyType;
-public $multiplier;
-
-public function __construct($energyType, $multiplier)
-	{
-		$this->energyType = $energyType;
-		$this->multiplier = $multiplier;
-	}
-}
-
-class Attack{
-
-	public $name;
-	public $damage;
-
-	public function __construct($name, $damage)
-	{
-		$this->name = $name;
-		$this->damage = $damage;
 	}
 }
