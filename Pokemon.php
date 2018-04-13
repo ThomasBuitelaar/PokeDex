@@ -50,28 +50,28 @@ class Pokemon
 		echo "<br>Does ". $totalDamage . " damage.";
 		$attackedPokemon->health = $attackedPokemon->health - $totalDamage;
 
-		echo "<br>".$attackedPokemon->name."&#39;s current health is ". $attackedPokemon->health;
+		echo "<br>".$attackedPokemon->name."&#39;s current health is ". $attackedPokemon->health ."<br>";
 	}
 	public function showData()
 	{
 		echo "<h3>".$this->name."</h3>";
 		echo "Type: ".$this->energyType."<br>";
-		echo "Health: ".$this->health."<br>";
-		echo "Attacks and damage: ";
+		echo "HP: ".$this->health."<br>";
+		echo "Attacks: ";
 		foreach($this->attacks as $key)
 		{
-			echo "<li>".$key->name . ",";
+			echo "<li>".$key->name . ", ";
 			echo $key->damage . "</li>";
 		}
 		echo "<br>";
 
 		echo "Weakness: ";
-		echo $this->weakness->energyType . ",";
-		echo $this->weakness->multiplier . '<br>';
+		echo $this->weakness->energyType . " with a multiplier of ";
+		echo $this->weakness->multiplier . 'x<br>';
 
 		echo "Resistance: ";
-		echo $this->resistance->energyType . ",";
-		echo $this->resistance->multiplier . "<br>";
+		echo $this->resistance->energyType . " with a multiplier of ";
+		echo $this->resistance->multiplier . "x<br>";
 		echo "========================= <br>";
 	}
 }
