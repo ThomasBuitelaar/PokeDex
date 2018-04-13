@@ -1,9 +1,6 @@
 <?php
 
 require 'Pokemon.php';
-require 'Attack.php'; 
-require 'Resistance.php';
-require 'Weakness.php';
 require 'Pikachu.php';
 require 'Charmeleon.php';
 

@@ -75,3 +75,42 @@ class Pokemon
 		echo "========================= <br>";
 	}
 }
+
+class Resistance
+{
+
+public $energyType;
+public $multiplier;
+
+public function __construct($energyType, $multiplier)
+	{
+		$this->energyType = $energyType;
+		$this->multiplier = $multiplier;
+	}
+}
+
+
+class Weakness
+{
+
+public $energyType;
+public $multiplier;
+
+public function __construct($energyType, $multiplier)
+	{
+		$this->energyType = $energyType;
+		$this->multiplier = $multiplier;
+	}
+}
+
+class Attack{
+
+	public $name;
+	public $damage;
+
+	public function __construct($name, $damage)
+	{
+		$this->name = $name;
+		$this->damage = $damage;
+	}
+}
